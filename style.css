@@ -5,18 +5,29 @@
   font-family: "DM Sans", sans-serif;
 }
 
+body {
+}
+
 .panels {
   display: flex;
   height: 100vh;
+  overflow: hidden;
 }
 
 .panel {
-  flex: 1;
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
+  transition: 0.5s;
+}
+p {
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .panel1 {
@@ -40,4 +51,25 @@
 .panel5 {
   background-color: #ffffff;
   color: #000000;
+}
+
+.panel > :first-child {
+  transform: translateY(-100%);
+}
+
+.panel.panel-active > :first-child {
+  transform: translateY(0);
+}
+
+.panel > :last-child {
+  transform: translateY(100%);
+}
+
+.panel.panel-active > :last-child {
+  transform: translateY(0);
+}
+
+.panel-active {
+  flex: 5;
+  font-size: 40px;
 }
