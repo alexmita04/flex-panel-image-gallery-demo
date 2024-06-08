@@ -1,11 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-size: 30px;
   font-family: "DM Sans", sans-serif;
-}
-
-body {
 }
 
 .panels {
@@ -15,19 +11,21 @@ body {
 }
 
 .panel {
+  font-size: 30px;
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
-  transition: 0.5s;
+  transition: all 0.5s;
 }
 p {
   flex: 1 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
 }
 
 .panel1 {
@@ -71,5 +69,5 @@ p {
 
 .panel-active {
   flex: 5;
-  font-size: 40px;
+  font-size: 50px;
 }
